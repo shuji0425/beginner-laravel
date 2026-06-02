@@ -18,6 +18,8 @@ if ! command -v php >/dev/null 2>&1; then
   echo "Windows の場合:"
   echo "  PHP をインストールして、php コマンドを使えるようにしてください。"
   echo ""
+  echo "詳しくは README.md の「PHP / Composer / Git の準備」を見てください。"
+  echo ""
   exit 1
 fi
 
@@ -32,6 +34,8 @@ if [ ! -f vendor/autoload.php ]; then
     echo ""
     echo "Windows の場合:"
     echo "  Composer 公式サイトからインストーラーを入れてください。"
+    echo ""
+    echo "詳しくは README.md の「PHP / Composer / Git の準備」を見てください。"
     echo ""
     exit 1
   fi

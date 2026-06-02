@@ -5,6 +5,26 @@
 このプロジェクトでは、Laravel の基本を学ぶために Todo リストの CRUD 処理を作っていく想定です。
 データベースは SQLite を使い、初期データは Seeder で作る方針です。
 
+## 準備で困ったら
+
+PHP、Composer、Git のインストールや、この README の手順で分からないことがあれば、AI に手伝ってもらってください。
+
+まずは次のように聞くと進めやすいです。
+
+例:
+
+```text
+Laravelを始めたい初心者です。
+このREADMEを手順通りに進めたいです。
+今どこから始めればいいか、1つずつ確認しながら手伝ってください。
+
+リポジトリURL:
+https://github.com/shuji0425/beginner-laravel
+```
+
+インストール画面や公式サイトで迷った場合は、その URL を貼ってください。
+エラーが出た場合は、実行したコマンドとエラー内容をそのまま貼ると、原因を一緒に確認しやすくなります。
+
 ## 最初に必要なもの
 
 - PHP
@@ -15,12 +35,53 @@ Node.js / npm は最初は使いません。
 SQLite を使うため、MySQL は不要です。
 画面を表示して Laravel を学ぶだけなら、軽い構成で始められます。
 
+## PHP / Composer / Git の準備
+
+まず、ターミナルで次のコマンドを実行して、入っているか確認します。
+
+```bash
+php --version
+composer --version
+git --version
+```
+
+バージョンが表示されれば準備できています。
+`command not found` のように表示された場合は、足りないものをインストールしてください。
+
+### macOS の場合
+
+Homebrew が入っている場合は、次のコマンドで入れられます。
+
+```bash
+brew install php composer git
+```
+
+Homebrew が入っていない場合は、先に Homebrew を入れてください。
+
+### Windows の場合
+
+次のものをインストールしてください。
+
+- PHP
+- Composer
+- Git for Windows
+
+インストール後、新しいターミナルを開いて、もう一度確認します。
+
+```bash
+php --version
+composer --version
+git --version
+```
+
+このプロジェクトでは SQLite を使うため、XAMPP や MySQL は不要です。
+
 ## プロジェクトを取得する
 
 GitHub からプロジェクトを取得します。
 
 ```bash
-git clone <このリポジトリのURL>
+git clone https://github.com/shuji0425/beginner-laravel.git
 cd beginner-laravel
 ```
 
