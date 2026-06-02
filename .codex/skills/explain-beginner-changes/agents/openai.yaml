@@ -1,0 +1,4 @@
+interface:
+  display_name: "初心者向け変更説明"
+  short_description: "コード変更の内容と考え方を初心者向けに処理単位で説明します"
+  default_prompt: "$explain-beginner-changes を使って、変更内容と理由を初心者向けに説明してください。"

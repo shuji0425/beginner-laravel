@@ -1,0 +1,4 @@
+interface:
+  display_name: "学習ログ整理"
+  short_description: "会話と作業内容を初心者向けの学習ログとして整理します"
+  default_prompt: "$summarize-learning-log を使って、この会話を初心者向けの学習ログにまとめてください。"

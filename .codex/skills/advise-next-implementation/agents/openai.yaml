@@ -1,0 +1,4 @@
+interface:
+  display_name: "次の実装提案"
+  short_description: "初心者の学習ログから次の実装方針と練習順を提案します"
+  default_prompt: "$advise-next-implementation を使って、この学習ログから次の実装ステップを提案してください。"
