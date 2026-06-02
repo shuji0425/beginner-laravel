@@ -5,6 +5,23 @@
 このプロジェクトでは、Laravel の基本を学ぶために Todo リストの CRUD 処理を作っていく想定です。
 データベースは SQLite を使い、初期データは Seeder で作る方針です。
 
+## AI と一緒に学ぶための方針
+
+このリポジトリには、AI が初学者向けに説明しやすくするためのルールを用意しています。
+
+- [AGENTS.md](AGENTS.md): Codex などの AI エージェント向け入口
+- [CLAUDE.md](CLAUDE.md): Claude 向け入口
+- [docs/ai-guidelines.md](docs/ai-guidelines.md): 共通の学習支援ルール
+- [.codex/skills](.codex/skills): Codex 用の学習支援 skill
+
+AI に依頼するときは、次のように伝えると、この教材の方針に沿って手伝ってもらいやすくなります。
+
+```text
+このリポジトリは初学者向けの Laravel 教材です。
+AGENTS.md と docs/ai-guidelines.md を読んで、初心者にも分かるように説明しながら手伝ってください。
+実務でよく見かける考え方も、断定しすぎずに補足してください。
+```
+
 ## 準備で困ったら
 
 PHP、Composer、Git のインストールや、この README の手順で分からないことがあれば、AI に手伝ってもらってください。
