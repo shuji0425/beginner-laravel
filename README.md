@@ -132,3 +132,14 @@ git restore .
 Todo の CRUD を Laravel のルーティング、Controller、Model、Blade、SQLite で学ぶことを優先します。
 
 JavaScript や CSS のビルドが必要になったら、あとから npm の設定を使います。
+
+## 個人用の学習履歴
+
+AI との会話や学習ログを残したい場合は、`logs/` フォルダに保存します。
+
+```bash
+logs/2026-06-02-learning-log.md
+```
+
+`logs/` は Git の管理対象から外しています。
+そのため、履歴は自分の PC だけに残り、コミットには含まれません。
