@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -11,15 +10,15 @@ class DatabaseSeeder extends Seeder
     use WithoutModelEvents;
 
     /**
-     * Seed the application's database.
+     * アプリ全体の Seeder を呼び出す場所です。
+     *
+     * ここには直接データをたくさん書かず、TodoSeeder のような
+     * 目的別の Seeder を呼び出すだけにすると見通しが良くなります。
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            TodoSeeder::class,
         ]);
     }
 }

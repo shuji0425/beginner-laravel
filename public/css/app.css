@@ -1,0 +1,294 @@
+/*
+ * Todo 画面の見た目を整える CSS です。
+ *
+ * Laravel の Blade で出力した HTML に class を付け、
+ * ここで余白、色、ボタン、一覧のレイアウトを指定しています。
+ */
+
+/* すべての要素で、余白や幅の計算を分かりやすくします。 */
+* {
+    box-sizing: border-box;
+}
+
+/* 画面全体の基本デザインです。 */
+body {
+    margin: 0;
+    color: #202124;
+    background: #f6f7f4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+/* 入力欄やボタンが OS 標準のフォントに戻らないようにします。 */
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 画面全体の横幅と上下の余白を決めます。 */
+.app-shell {
+    width: min(920px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+/* ページ上部の見出しエリアです。 */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+/* 小さなラベル風テキストです。 */
+.eyebrow {
+    margin: 0 0 6px;
+    color: #5b6b42;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.1;
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+}
+
+h3 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.lead {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: #5f6368;
+}
+
+/* 入力フォームや一覧を囲む白い領域です。 */
+.panel,
+.notice {
+    border: 1px solid #d9ded1;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.panel {
+    margin-top: 16px;
+    padding: 22px;
+}
+
+.notice {
+    margin: 16px 0;
+    padding: 12px 14px;
+    color: #22543d;
+    background: #e8f5ee;
+}
+
+/* Todo 作成・編集フォームの並びを指定します。 */
+.todo-form {
+    display: grid;
+    gap: 16px;
+}
+
+/* 入力欄 1 つ分のまとまりです。 */
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field label,
+.checkbox-row {
+    font-weight: 700;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border: 1px solid #cbd1c0;
+    border-radius: 6px;
+    padding: 10px 12px;
+    background: #fff;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #6f8f3f;
+    outline: 3px solid #dce9c5;
+}
+
+.hint,
+.error,
+.meta,
+.empty {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.error {
+    color: #b42318;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-actions,
+.todo-actions,
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* 共通ボタンの見た目です。 */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.primary {
+    color: #fff;
+    background: #496f1f;
+}
+
+.secondary {
+    color: #273315;
+    border-color: #cbd1c0;
+    background: #f8faf5;
+}
+
+.danger {
+    color: #8a1f11;
+    border-color: #f0b8ae;
+    background: #fff3f1;
+}
+
+.count {
+    color: #5f6368;
+    font-size: 0.95rem;
+}
+
+/* Todo 一覧全体です。 */
+.todo-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Todo 1 件分の見た目です。 */
+.todo-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+    border: 1px solid #e4e7dd;
+    border-radius: 8px;
+    padding: 14px;
+    background: #fcfdfb;
+}
+
+.todo-main {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+/* 完了ボタンです。丸いチェックボックス風にしています。 */
+.check-button {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #8aa35f;
+    border-radius: 50%;
+    color: #fff;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+/* 完了済みの Todo だけに当たる見た目です。 */
+.is-done .check-button {
+    background: #496f1f;
+}
+
+.todo-text {
+    min-width: 0;
+}
+
+.todo-text p {
+    margin-bottom: 8px;
+    color: #4b5563;
+    overflow-wrap: anywhere;
+}
+
+.is-done .todo-text h3 {
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+.meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* スマホなど横幅が狭い画面用の調整です。 */
+@media (max-width: 680px) {
+    .app-shell {
+        width: min(100% - 20px, 920px);
+        padding-top: 20px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .todo-item {
+        grid-template-columns: 1fr;
+    }
+
+    .todo-actions {
+        justify-content: flex-start;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .todo-actions form,
+    .todo-actions a {
+        flex: 1;
+    }
+}
