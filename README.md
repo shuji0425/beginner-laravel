@@ -61,7 +61,7 @@ git --version
 GitHub からプロジェクトを取得します。
 
 ```bash
-git clone <このリポジトリのURL>
+git clone https://github.com/shuji0425/beginner-laravel.git
 cd beginner-laravel
 ```
 
