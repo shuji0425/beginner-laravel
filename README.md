@@ -15,6 +15,47 @@ Node.js / npm は最初は使いません。
 SQLite を使うため、MySQL は不要です。
 画面を表示して Laravel を学ぶだけなら、軽い構成で始められます。
 
+## PHP / Composer / Git の準備
+
+まず、ターミナルで次のコマンドを実行して、入っているか確認します。
+
+```bash
+php --version
+composer --version
+git --version
+```
+
+バージョンが表示されれば準備できています。
+`command not found` のように表示された場合は、足りないものをインストールしてください。
+
+### macOS の場合
+
+Homebrew が入っている場合は、次のコマンドで入れられます。
+
+```bash
+brew install php composer git
+```
+
+Homebrew が入っていない場合は、先に Homebrew を入れてください。
+
+### Windows の場合
+
+次のものをインストールしてください。
+
+- PHP
+- Composer
+- Git for Windows
+
+インストール後、新しいターミナルを開いて、もう一度確認します。
+
+```bash
+php --version
+composer --version
+git --version
+```
+
+このプロジェクトでは SQLite を使うため、XAMPP や MySQL は不要です。
+
 ## プロジェクトを取得する
 
 GitHub からプロジェクトを取得します。
